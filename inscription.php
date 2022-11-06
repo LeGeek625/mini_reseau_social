@@ -106,18 +106,19 @@ if(isset($_POST['formInscription']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="bootstrap/js/bootstrap.js"></script>
     <title>page d'inscription</title>
 </head>
 <body>
-    <div align="center">
-        <h1>Inscription</h1>
+    <div>
+        <h2>Inscription</h2>
         <?php 
         if(isset($erreur)){
             echo '<h3>'.$erreur.'</h3>' ;
         } 
     ?>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-       <h3> 
             <label for="prenom">Prenom</label><br>
             <input type="text" id="prenom" name="prenom"><br>
 
@@ -157,7 +158,6 @@ if(isset($_POST['formInscription']))
             <textarea name="a_propos" id="a_propos" cols="30" rows="5"></textarea><br><br>
 
             <input type="submit" name="formInscription" value="je m'inscrit">
-        </h3>
     </form>
 
     <a href="index.php">J'ai déjà un compte utilisateur</a>

@@ -14,19 +14,19 @@ if (isset($_GET['id']) AND $_GET['id'] > 0) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="bootstrap/js/bootstrap.js"></script>
     <title>Document</title>
 </head>
 <body>
 <h2>Bienvenue <?php echo $userinfos['pseudo'] ?> <div> <a  href="deconnection.php">Déconnection</a></div></h2>
 <div class="menu">
-    <h3>
         <a href="#">Accueil</a><br>
         <a href="update.php">Changer vos information</a><br>
         <a href="#">Les membres</a><br>
         <a href="#">Vos amis</a><br>
         <a href="#">invitations</a><br>
         <a href="#">message</a>
-    </h3>
 </div> 
 <hr>
     <div>

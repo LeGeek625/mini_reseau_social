@@ -36,11 +36,12 @@ if(isset($_POST['formconnect']))
     <title>page de connexion</title>
 </head>
 <body>
-    <div align="center">
-        <h1>Connexion</h1>
+    <span class="glyphicon glyphicon-star"></span>
+    <div>
+        <h2>Connexion</h2>
         <?php if(!empty($erreur)){ echo '<h3>'.$erreur.'</h3>'; } ?>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-       <h3>
+      
             <label for="pseudo">Pseudo</label><br>
             <input type="text" id="pseudo" name="pseudo"><br>
 
@@ -48,7 +49,7 @@ if(isset($_POST['formconnect']))
             <input type="password" id="mdp" name="mdp"><br><br>
 
             <input type="submit" name="formconnect" value="Se Connecter">
-        </h3>
+     
     </form>
     <a href="inscription.php">Je n'est pas encore créer un compte utilisateur</a>    <?php  /*
         if(isset($erreur)){
