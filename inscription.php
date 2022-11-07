@@ -107,11 +107,13 @@ if(isset($_POST['formInscription']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
     <script src="bootstrap/js/bootstrap.js"></script>
     <title>page d'inscription</title>
 </head>
 <body>
-    <div>
+<div class="text-center">
+
         <h2>Inscription</h2>
         <?php 
         if(isset($erreur)){
@@ -119,51 +121,76 @@ if(isset($_POST['formInscription']))
         } 
     ?>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-            <label for="prenom">Prenom</label><br>
-            <input type="text" id="prenom" name="prenom"><br>
+   
+    <table align="center">
+            <tr>
+                <td>
+                    <label class="form-label" for="prenom">Prenom</label><br>
+                    <input class="form-control-larg" type="text" id="prenom" name="prenom">
+                </td> 
+                <td>
+                    <label class="form-label" for="nom">Nom</label><br>
+                    <input class="form-control-larg" type="text" id="nom" name="nom">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label" for="pseudo">Pseudo</label><br>
+                    <input class="form-control-larg" type="text" id="pseudo" name="pseudo">
+                </td>  
+                <td>
 
-            <label for="nom">Nom</label><br>
-            <input type="text" id="nom" name="nom"><br>
-
-            <label for="pseudo">Pseudo</label><br>
-            <input type="text" id="pseudo" name="pseudo"><br>
-
-            <label for="sexe">Sexe</label><br>
-            <select name="sexe" id="sexe">
-                <option value="Homme">Homme</option>
-                <option value="Femme">Femme</option>
-            </select> <br>
-
-            <label for="situation">Situation</label><br>
-            <select name="situation" id="situation">
-                <option value="Célibataire">Célibataire</option>
-                <option value="En Couple">En Couple</option>
-                <option value="Divorcé">Divorcé</option>
-                <option value="Veuf(ve)">Veuf(ve)</option>
-            </select> <br>
-           
-            <label for="mdp">Mots de Passe</label><br>
-            <input type="password" id="mdp" name="mdp"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="sexe">Sexe</label><br>
+                    <select name="sexe" id="sexe">
+                        <option value="Homme">Homme</option>
+                        <option value="Femme">Femme</option>
+                    </select>
+                </td>  
+                <td>
+                    <label for="situation">Situation</label><br>
+                    <select name="situation" id="situation">
+                        <option value="Célibataire">Célibataire</option>
+                        <option value="En Couple">En Couple</option>
+                        <option value="Divorcé">Divorcé</option>
+                        <option value="Veuf(ve)">Veuf(ve)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label" for="mdp">Mots de Passe</label><br>
+                    <input class="form-control-larg" type="password" id="mdp" name="mdp">
+                </td>  
+                <td>
+                    <label class="form-label" for="mdp2">Confirmation Mots de Passe</label><br>
+                    <input class="form-control-larg" type="password" id="mdp2" name="mdp2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <label class="form-label" for="email">Email</label><br>
+            <input class="form-control-larg" type="email" id="email" name="email">
+                </td>  
+                <td>
+                <label class="form-label" for="confirm_email">Confirmation email</label><br>
+            <input class="form-control-larg" type="email" id="confirm_email" name="confirm_email">
+                </td>
+            </tr>
+            <tr><td><label class="form-label" for="a_propos">A propos</label><br>
+            <textarea class="form-control-larg" name="a_propos" id="a_propos" cols="30" rows="5"></textarea></td>  </tr>
+            <tr><td><input class="btn btn-primary" type="submit" name="formInscription" value="je m'inscrit"></td> </tr>
             
-            <label for="mdp2">Confirmation Mots de Passe</label><br>
-            <input type="password" id="mdp2" name="mdp2"><br>
-            
-            <label for="email">Email</label><br>
-            <input type="email" id="email" name="email"><br>
-
-            <label for="confirm_email">Confirmation email</label><br>
-            <input type="email" id="confirm_email" name="confirm_email"><br>
-
-            <label for="a_propos">A propos</label><br>
-            <textarea name="a_propos" id="a_propos" cols="30" rows="5"></textarea><br><br>
-
-            <input type="submit" name="formInscription" value="je m'inscrit">
+        </table> 
     </form>
 
     <a href="index.php">J'ai déjà un compte utilisateur</a>
 
    
-    </div>
+</div>
     
 </body>
 </html>

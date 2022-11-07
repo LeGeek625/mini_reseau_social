@@ -32,31 +32,37 @@ if(isset($_POST['formconnect']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
     <script src="bootstrap/js/bootstrap.js"></script>
     <title>page de connexion</title>
 </head>
 <body>
-    <span class="glyphicon glyphicon-star"></span>
-    <div>
-        <h2>Connexion</h2>
+    <div class="text-center">
+        
         <?php if(!empty($erreur)){ echo '<h3>'.$erreur.'</h3>'; } ?>
+    <main align="center" class="w-100%">
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-      
-            <label for="pseudo">Pseudo</label><br>
-            <input type="text" id="pseudo" name="pseudo"><br>
-
-            <label for="mdp">Mots de Passe</label><br>
-            <input type="password" id="mdp" name="mdp"><br><br>
-
-            <input type="submit" name="formconnect" value="Se Connecter">
-     
+  
+         <p class="h3 mb-3 fw-normal">Connexion</p> 
+    <div class="mb-3" >
+            <label for="pseudo" class="form-label" >Pseudo</label>
+           <div> <input align="center" type="text" id="pseudo" name="pseudo"  class="form-control-larg"></div>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+            <label for="mdp" class="form-label" >Mots de Passe</label>
+           <div> <input align="center" type="password" id="mdp" name="mdp"  class="form-control-larg"></div>
+            <div class="mb-3 form-check">
+             <input align="center" type="checkbox" class="form-control-larg" id="exampleCheck1" >
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <input type="submit" name="formconnect" value="Se Connecter" class="btn btn-primary">
+  
     </form>
-    <a href="inscription.php">Je n'est pas encore créer un compte utilisateur</a>    <?php  /*
-        if(isset($erreur)){
-            echo $erreur;
-        } */
-    ?>
+   
+    <a  href="inscription.php">Je n'est pas encore créer un compte utilisateur</a>   
+    </main>
+     
+    <?php /* if(isset($erreur)){ echo $erreur; } */ ?>
     </div>
-    
 </body>
 </html>
